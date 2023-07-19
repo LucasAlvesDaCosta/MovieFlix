@@ -6,8 +6,8 @@ import { getAuthData } from './storage';
 export const BASE_URL =
   process.env.REACT_APP_BACKEND_URL ?? 'http://localhost:8080';
 
-const CLIENT_ID = process.env.REACT_APP_CLIENT_ID ?? 'dscatalog';
-const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET ?? 'dscatalog123';
+const CLIENT_ID = process.env.REACT_APP_CLIENT_ID ?? 'myclientid';
+const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET ?? 'myclientsecret';
 
 type LoginData = {
   username: string;
@@ -48,7 +48,7 @@ export const requestBackend = (config: AxiosRequestConfig) => {
 // Add a request interceptor
 axios.interceptors.request.use(
   function (config) {
-    //
+    console.log("Autenticado!");
     return config;
   },
   function (error) {
@@ -65,7 +65,8 @@ axios.interceptors.response.use(
   },
   function (error) {
     if (error.response.status === 401) {
-      history.push('/admin/auth');
+      console.log("Erro",error);
+      history.push('/home');
     }
     return Promise.reject(error);
   }

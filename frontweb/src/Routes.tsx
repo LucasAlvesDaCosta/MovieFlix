@@ -1,11 +1,10 @@
-import { Router, Switch, Route, Redirect } from 'react-router-dom';
-import Home from 'pages/Home';
+import { Router, Switch, Route } from 'react-router-dom';
 import Navbar from 'components/Navbar';
-import Catalog from 'pages/Catalog';
-import Admin from 'pages/Admin';
-import ProductDetails from 'pages/ProductDetails';
-import Auth from 'pages/Admin/Auth';
 import history from 'util/history';
+import Home from 'pages/Home';
+import PrivateRoute from 'components/PrivateRoute';
+import MovieCatalog from 'pages/Auth/MovieCatalog';
+import MovieDetails from 'pages/Auth/MovieDetails';
 
 const Routes = () => (
   <Router history={history}>
@@ -14,20 +13,17 @@ const Routes = () => (
       <Route path="/" exact>
         <Home />
       </Route>
-      <Route path="/products" exact>
-        <Catalog />
+      <Route path="/home" exact>
+        <Home />
       </Route>
-      <Route path="/products/:productId">
-        <ProductDetails />
-      </Route>
-      <Redirect from="/admin/auth" to="/admin/auth/login" exact />
-      <Route path="/admin/auth" >
-        <Auth />
-      </Route>
-      <Redirect from="/admin" to="/admin/products" exact />
-      <Route path="/admin">
-        <Admin />
-      </Route>
+      <PrivateRoute path= "/movies">
+        <Route path= "/movies" exact>
+          <MovieCatalog/>
+        </Route>
+        <Route path= "/movies/:movieId">
+          <MovieDetails/>
+        </Route>
+      </PrivateRoute>
     </Switch>
   </Router>
 );

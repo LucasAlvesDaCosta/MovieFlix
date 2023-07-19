@@ -1,6 +1,5 @@
 import { ReactComponent as MainImage } from 'assets/images/main-image.svg';
-import ButtonIcon from 'components/ButtonIcon';
-import { Link } from 'react-router-dom';
+import Login from 'pages/Auth/Login';
 
 import './styles.css';
 
@@ -17,9 +16,7 @@ const Home = () => {
             </p>
           </div>
           <div>
-            <Link to="/products">
-              <ButtonIcon text="Inicie agora a sua busca" />
-            </Link>
+           <Login/>
           </div>
         </div>
         <div className="home-image-container">
