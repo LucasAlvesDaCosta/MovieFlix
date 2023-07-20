@@ -9,6 +9,7 @@ const MovieCatalog = () => {
 
   useEffect(() => {
     const params: AxiosRequestConfig = {
+      withCredentials: true,
       method: 'GET',
       url: "/movies",
       params: {

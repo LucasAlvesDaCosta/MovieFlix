@@ -53,7 +53,7 @@ const Login = () => {
     <div className="home-container">
 
       <div className="base-card login-card">
-        <h1>LOGIN log ssss</h1>
+        <h1>LOGIN</h1>
         {hasError && (
           <div className="alert alert-danger">Erro ao tentar efetuar o login</div>
         )}

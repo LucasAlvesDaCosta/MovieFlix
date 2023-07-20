@@ -3,12 +3,12 @@
   min-height: 70px;
 }
 
-.nav-logo-text {
-  color: #fff;
+.nav-logo-text h4{
+  color: #000000;
 }
 
 .nav-logo-text:hover {
-  color: #fff;
+  color:#000000;
 }
 
 .main-menu {
@@ -25,11 +25,11 @@
 
 .main-menu a.active {
   font-weight: bold;
-  color: #fff;
+  color: #000000;
 }
 
 .main-menu a:hover {
-  color: #fff;
+  color: #000000;
 }
 
 .nav-login-logout {
@@ -43,7 +43,7 @@
 @media (min-width: 768px) {
   .nav-login-logout {
     display: unset;
-    color: #fff;
+    color: #000000;
     margin-right: 15px;
   }
 }
