@@ -1,0 +1,22 @@
+.movieCatalog-container{
+    background-color: #525252;
+    padding: 10px
+}
+
+.movieCatalog-container h1{
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.36px;
+    padding: 10px 10px 40px 10px;
+}
+
+.movie-listing{
+  padding: 0px 10px 0 10px;
+}
+
+.movie-access{
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: -0.27px;
+}

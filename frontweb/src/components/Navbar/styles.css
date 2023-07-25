@@ -1,5 +1,5 @@
 .main-nav {
-  padding-left: 40px;
+  padding-left: 10px;
   min-height: 70px;
 }
 
@@ -33,11 +33,11 @@
 }
 
 .nav-login-logout {
-  display: none;
-}
-
-.nav-username {
-  display: none;
+  border: solid 1.5px black;
+  border-radius: 10px;
+  padding: 2px 30px;
+  font-weight: 700;
+  font-size: 0.8em;
 }
 
 @media (min-width: 768px) {

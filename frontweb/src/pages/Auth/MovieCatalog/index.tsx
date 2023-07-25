@@ -4,6 +4,9 @@ import { SpringPage } from "types/SpringPage";
 import { Movie } from "types/movie";
 import { requestBackend } from "util/requests";
 
+import './styles.css';
+import { Link } from "react-router-dom";
+
 const MovieCatalog = () => {
   const [page, setPage] = useState<SpringPage<Movie>>();
 
@@ -29,14 +32,12 @@ const MovieCatalog = () => {
 
   return (
     <div className="movieCatalog-container">
-      <h1>Catalogo de filmes</h1>
-      <div className="row">
+      <h1>Tela Listagem de Filmes</h1>
         {page?.content.map((movie) => (
-          <div className="col-sm-6 col-lg-4 col-xl-3">
-              <p key={movie.id}>{movie.title}</p>
+          <div className="movie-listing">
+              <p key={movie.id} className="movie-access">Acessar <Link to={`/movies/${movie.id}`}>/movies/{movie.title}</Link></p>
           </div>
         ))}
-      </div>
     </div>
   );
 
