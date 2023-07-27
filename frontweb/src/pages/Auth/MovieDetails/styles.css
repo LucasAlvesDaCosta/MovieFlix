@@ -1,0 +1,10 @@
+.movie-details-container {
+    padding: 20px 10px 15px 10px;
+}
+
+.movie-details-container h1 {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.36px;
+    padding-bottom: 20px;
+}

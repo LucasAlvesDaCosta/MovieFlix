@@ -34,7 +34,7 @@ const MovieCatalog = () => {
     <div className="movieCatalog-container">
       <h1>Tela Listagem de Filmes</h1>
         {page?.content.map((movie) => (
-          <div className="movie-listing">
+          <div key={movie.id} className="movie-listing">
               <p key={movie.id} className="movie-access">Acessar <Link to={`/movies/${movie.id}`}>/movies/{movie.title}</Link></p>
           </div>
         ))}

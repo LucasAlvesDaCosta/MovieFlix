@@ -1,0 +1,19 @@
+.reviewListing-card {
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.reviewListing-card p {
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    color: #9E9E9E;
+    text-align: justify;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.24px;
+    padding: 10px;
+}
+
+.reviewListing-card h5 {
+    padding: 10px;
+}

@@ -51,10 +51,10 @@ const ReviewForm = ({movieId, onInsertReview} : Props) => {
     };
 
     return (
-        <div>
-            <div>
+        <div className="reviewForm-card base-card">
+            <div className="">
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <div>
+                    <div className="mb-2">
                         <input
                         {...register('text', {
                             required: 'campo obrigatório',
@@ -62,13 +62,14 @@ const ReviewForm = ({movieId, onInsertReview} : Props) => {
                         type="text"
                         name="text"
                         placeholder="Digite sua avaliação aqui"
+                        className="form-control base-input"
                         />
                         <div>
                             {errors.text?.message}
                         </div>
                     </div>
-                    <button type="submit">
-                        SALVAR AVALIAÇÃO
+                    <button type="submit" className="btn-container btn btn-primary">
+                        <h6>SALVAR AVALIAÇÃO</h6>
                     </button>
                 </form>
             </div>
