@@ -16,10 +16,6 @@
 }
 
 @media (min-width: 576px) {
-    .btn-icon-container {
-        width: 70px;
-        height: 70px;
-    }
 
     .btn h6 {
         font-size: 18px;

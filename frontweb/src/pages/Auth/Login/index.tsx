@@ -57,7 +57,7 @@ const Login = () => {
         {hasError && (
           <div className="alert alert-danger">Erro ao tentar efetuar o login</div>
         )}
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)} className="mb-2">
           <div className="mb-4">
             <input
               {...register('username', {
